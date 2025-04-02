@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>DC Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Загрузочный экран -->
+    <div id="loading-screen">
+        <h1>DC Simulator</h1>
+        <div class="loader"></div>
+    </div>
+
+    <!-- Начальный экран -->
+    <div id="start-screen" class="hidden">
+        <button id="start-btn">Завести питомца</button>
+    </div>
+
+    <!-- Экран выбора имени -->
+    <div id="name-screen" class="hidden">
+        <input type="text" id="pet-name" placeholder="Имя питомца">
+        <button id="confirm-name">Подтвердить</button>
+    </div>
+
+    <!-- Экран выбора питомца -->
+    <div id="pet-selection" class="hidden">
+        <div class="pet-grid">
+            <div class="pet-card" data-pet="rabbit">
+                <img src="images/rabbit.png" alt="Кролик">
+                <span>Кролик</span>
+            </div>
+            <div class="pet-card" data-pet="cat">
+                <img src="images/cat.png" alt="Кот">
+                <span>Кот</span>
+            </div>
+            <div class="pet-card" data-pet="panda">
+                <img src="images/panda.png" alt="Панда">
+                <span>Панда</span>
+            </div>
+            <div class="pet-card" data-pet="dog">
+                <img src="images/dog.png" alt="Собака">
+                <span>Собака</span>
+            </div>
+            <div class="pet-card" data-pet="hamster">
+                <img src="images/hamster.png" alt="Хомяк">
+                <span>Хомяк</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Игровой экран -->
+    <div id="game-screen" class="hidden">
+        <div class="stats">
+            <span id="coins">Монеты: 0</span>
+            <span id="multiplier">Множитель: 1x</span>
+        </div>
+        <div id="pet-container">
+            <img id="selected-pet" src="" alt="Питомец">
+        </div>
+        <div class="shop">
+            <h2>Магазин</h2>
+            <button class="shop-item" data-multiplier="1.2">x1.2 (100 монет)</button>
+            <button class="shop-item" data-multiplier="1.5">x1.5 (200 монет)</button>
+            <button class="shop-item" data-multiplier="2.0">x2.0 (500 монет)</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
